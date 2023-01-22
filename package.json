@@ -1,0 +1,32 @@
+{
+  "name": "key-value-storage-azure-data-tables",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": "e53e04ac",
+  "homepage": "https://github.com/e53e04ac/key-value-storage-azure-data-tables#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e53e04ac/key-value-storage-azure-data-tables.git"
+  },
+  "bugs": {
+    "url": "https://github.com/e53e04ac/key-value-storage-azure-data-tables/issues"
+  },
+  "type": "module",
+  "types": "./index.d.ts",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@azure/data-tables": "^13.2.1",
+    "@azure/identity": "^3.1.3",
+    "base": "github:e53e04ac/base",
+    "hold": "github:e53e04ac/hold",
+    "key-value-storage": "github:e53e04ac/key-value-storage"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18"
+  }
+}
