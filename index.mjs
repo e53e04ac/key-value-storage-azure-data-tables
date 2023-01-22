@@ -12,9 +12,9 @@ import { hold } from 'hold';
 import { unwrap } from 'hold';
 
 /** @type {import('.').KeyValueStorageAzureDataTables.Constructor} */
-const constructor = ((options, __GenericTypes__) => {
+const constructor = ((options) => {
 
-    /** @typedef {typeof __GenericTypes__ extends undefined | infer R ? R : never} GenericTypes */
+    /** @typedef {Required<options>['__GenericTypes__']} GenericTypes */
     /** @typedef {GenericTypes['T']} T */
 
     const _options = ({

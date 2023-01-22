@@ -21,6 +21,9 @@ export declare namespace KeyValueStorageAzureDataTables {
         readonly deserialize: {
             (entity: Record<string, unknown>, key: string): Promise<T>;
         };
+        readonly __GenericTypes__?: {
+            readonly T: T;
+        };
     };
 
     type _Self<T extends object> = {
@@ -34,9 +37,7 @@ export declare namespace KeyValueStorageAzureDataTables {
     };
 
     type Constructor = {
-        <T extends object>(options: Options<T>, __GenericTypes__?: {
-            readonly T: T;
-        }): Self<T>;
+        <T extends object>(options: Options<T>): Self<T>;
     };
 
     type Companion = {
