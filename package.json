@@ -27,6 +27,6 @@
     "key-value-storage": "github:e53e04ac/key-value-storage"
   },
   "devDependencies": {
-    "@types/node": "^18.11.18"
+    "@types/node": "^18.11.19"
   }
 }
