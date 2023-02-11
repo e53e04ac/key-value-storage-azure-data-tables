@@ -11,7 +11,7 @@ import { KeyValueStorage } from 'e53e04ac/key-value-storage-azure-data-tables';
 
 ~~~~~ mermaid
 graph RL;
-  A(["e53e04ac/key-value-storage-azure-data-tables"]);
+  A(["package.json"]);
   subgraph "dependencies";
     B_0(["@azure/data-tables"]);
     B_1(["@azure/identity"]);
@@ -22,52 +22,62 @@ graph RL;
     B_4(["@types/node"]);
     B_5(["e53e04ac/key-value-storage"]);
   end;
-  A --reference--> B_0;
-  A --reference--> B_1;
-  A --reference--> B_2;
-  A --reference--> B_3;
-  A --reference--> B_4;
-  A --reference--> B_5;
+  A ----> B_0;
+  A ----> B_1;
+  A ----> B_2;
+  A ----> B_3;
+  A ----> B_4;
+  A ----> B_5;
   click B_0 "https://www.npmjs.org/package/@azure/data-tables/v/13.2.1";
   click B_1 "https://www.npmjs.org/package/@azure/identity/v/3.1.3";
-  click B_2 "https://github.com/e53e04ac/base/tree/b4e091dbfeba0ea30c870ac7ac7877582e3fd4f0";
-  click B_3 "https://github.com/e53e04ac/hold/tree/2143f5f52192ae4156ea0af80d41c87c55355e9c";
+  click B_2 "https://github.com/e53e04ac/base/tree/2dc903faf7859d755dd52f7fde706be5170b9a6f";
+  click B_3 "https://github.com/e53e04ac/hold/tree/285d028e225a7e75747417c3ed6b1ca0d5f52f6a";
   click B_4 "https://www.npmjs.org/package/@types/node/v/18.13.0";
-  click B_5 "https://github.com/e53e04ac/key-value-storage/tree/17bb60fab4c6ab2949264d97b1a2d14b053c81a6";
+  click B_5 "https://github.com/e53e04ac/key-value-storage/tree/aac96bb14624c4984234bd1f36dba5e21efc04e8";
 ~~~~~
 
 ~~~~~ mermaid
 graph LR;
-  subgraph "e53e04ac/key-value-storage-azure-data-tables"
-    C0("index.mjs");
-    C1("index.d.ts");
+  A(["index.mjs"])
+  subgraph "@azure/data-tables";
+    B_0_0(["TableClient"]);
   end;
-  subgraph "@azure/data-tables"
-    D0(["TableClient"]);
+  subgraph "@azure/identity";
+    B_1_0(["DefaultAzureCredential"]);
   end;
-  subgraph "@azure/identity"
-    D1(["DefaultAzureCredential"]);
+  subgraph "base";
+    B_2_0(["Base"]);
   end;
-  subgraph "base"
-    D2(["Base"]);
+  subgraph "hold";
+    B_3_0(["hold"]);
+    B_3_1(["unwrap"]);
   end;
-  subgraph "hold"
-    D3(["hold"]);
-    D4(["unwrap"]);
-    D5(["Get"]);
-    D6(["ValueOrGet"]);
+  B_0_0 ----> A;
+  B_1_0 ----> A;
+  B_2_0 ----> A;
+  B_3_0 ----> A;
+  B_3_1 ----> A;
+~~~~~
+
+~~~~~ mermaid
+graph LR;
+  A(["index.d.ts"])
+  subgraph "@azure/data-tables";
+    B_0_0(["TableClient"]);
   end;
-  subgraph "key-value-storage"
-    D7(["KeyValueStorage"]);
+  subgraph "base";
+    B_1_0(["Base"]);
   end;
-  D0 --import--> C0;
-  D1 --import--> C0;
-  D2 --import--> C0;
-  D3 --import--> C0;
-  D4 --import--> C0;
-  D0 --import--> C1;
-  D2 --import--> C1;
-  D5 --import--> C1;
-  D6 --import--> C1;
-  D7 --import--> C1;
+  subgraph "hold";
+    B_2_0(["Get"]);
+    B_2_1(["ValueOrGet"]);
+  end;
+  subgraph "key-value-storage";
+    B_3_0(["KeyValueStorage"]);
+  end;
+  B_0_0 ----> A;
+  B_1_0 ----> A;
+  B_2_0 ----> A;
+  B_2_1 ----> A;
+  B_3_0 ----> A;
 ~~~~~
