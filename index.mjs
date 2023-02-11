@@ -103,7 +103,7 @@ const companion = ({
     }),
 });
 
-/** @type {import('.').KeyValueStorageAzureDataTables.Companion} */
+/** @type {import('.').KeyValueStorageAzureDataTables.ConstructorWithCompanion} */
 const constructorWithCompanion = Object.assign(constructor, companion);
 
 export { constructorWithCompanion as KeyValueStorageAzureDataTables };
