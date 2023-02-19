@@ -6,7 +6,7 @@
 
 import { TableClient } from '@azure/data-tables';
 
-import { Base } from 'base';
+import { EventEmitter } from 'event-emitter';
 import { Get } from 'hold';
 import { ValueOrGet } from 'hold';
 import { KeyValueStorage } from 'key-value-storage';
@@ -26,12 +26,14 @@ export declare namespace KeyValueStorageAzureDataTables {
         };
     };
 
+    type EventSpecs = Record<never, never>;
+
     type _Self<T extends object> = {
         readonly options: Get<Options<T>>;
         readonly _options: Get<unknown>;
     };
 
-    type Self<T extends object> = Base & KeyValueStorage<T> & {
+    type Self<T extends object> = EventEmitter<EventSpecs> & KeyValueStorage<T> & {
         readonly _KeyValueStorage: Get<_Self<T>>;
         readonly _KeyValueStorageAzureDataTables: Get<_Self<T>>;
     };

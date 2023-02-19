@@ -7,7 +7,7 @@
 import { TableClient } from '@azure/data-tables';
 import { DefaultAzureCredential } from '@azure/identity';
 
-import { Base } from 'base';
+import { EventEmitter } from 'event-emitter';
 import { hold } from 'hold';
 import { unwrap } from 'hold';
 
@@ -37,7 +37,7 @@ const constructor = ((options) => {
 
     /** @type {import('.').KeyValueStorageAzureDataTables.Self<T>} */
     const self = ({
-        ...Base({}),
+        ...EventEmitter({}),
         _KeyValueStorage: (() => {
             return _self;
         }),
