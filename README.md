@@ -23,9 +23,9 @@ graph RL;
     B_5(["key-value-storage"]);
   end;
   subgraph "github";
-    C_2(["e53e04ac/event-emitter\n98fd492f5a6e31cd646d4b79e70035061165871f"]);
-    C_3(["e53e04ac/hold\n6845a848f97733b8cd8a34bfc03c3bf040818aa8"]);
-    C_5(["e53e04ac/key-value-storage\n0c416b2f75d9d2c6a56b22b658d29970b1729090"]);
+    C_2(["e53e04ac/event-emitter\naea7d828d486572514f193752191206e0cbeeaa5"]);
+    C_3(["e53e04ac/hold\n593585d63bb24dc044f13a88375b53f9fa565229"]);
+    C_5(["e53e04ac/key-value-storage\nf8859c136309df5ece3827a5d40d077a00585f83"]);
   end;
   subgraph "npmjs";
     C_0(["@azure/data-tables\n13.2.1"]);
@@ -46,39 +46,10 @@ graph RL;
   B_5 ----> C_5;
   click C_0 "https://www.npmjs.com/package/@azure/data-tables/v/13.2.1";
   click C_1 "https://www.npmjs.com/package/@azure/identity/v/3.1.3";
-  click C_2 "https://github.com/e53e04ac/event-emitter/tree/98fd492f5a6e31cd646d4b79e70035061165871f";
-  click C_3 "https://github.com/e53e04ac/hold/tree/6845a848f97733b8cd8a34bfc03c3bf040818aa8";
+  click C_2 "https://github.com/e53e04ac/event-emitter/tree/aea7d828d486572514f193752191206e0cbeeaa5";
+  click C_3 "https://github.com/e53e04ac/hold/tree/593585d63bb24dc044f13a88375b53f9fa565229";
   click C_4 "https://www.npmjs.com/package/@types/node/v/18.14.1";
-  click C_5 "https://github.com/e53e04ac/key-value-storage/tree/0c416b2f75d9d2c6a56b22b658d29970b1729090";
-~~~~~
-
-~~~~~ mermaid
-graph RL;
-  subgraph "e53e04ac/key-value-storage-azure-data-tables";
-    E_0(["KeyValueStorageAzureDataTables"]);
-    E_1(["KeyValueStorage"]);
-  end;
-  M["index.mjs"]
-  subgraph "@azure/data-tables";
-    I_0_0(["TableClient"]);
-  end;
-  subgraph "@azure/identity";
-    I_1_0(["DefaultAzureCredential"]);
-  end;
-  subgraph "event-emitter";
-    I_2_0(["EventEmitter"]);
-  end;
-  subgraph "hold";
-    I_3_0(["hold"]);
-    I_3_1(["unwrap"]);
-  end;
-  M ----> I_0_0;
-  M ----> I_1_0;
-  M ----> I_2_0;
-  M ----> I_3_0;
-  M ----> I_3_1;
-  E_0 ----> M;
-  E_1 ----> M;
+  click C_5 "https://github.com/e53e04ac/key-value-storage/tree/f8859c136309df5ece3827a5d40d077a00585f83";
 ~~~~~
 
 ~~~~~ mermaid
@@ -110,4 +81,33 @@ graph RL;
   E_0 ----> M;
   E_1 ----> M;
   E_2 ----> M;
+~~~~~
+
+~~~~~ mermaid
+graph RL;
+  subgraph "e53e04ac/key-value-storage-azure-data-tables";
+    E_0(["KeyValueStorageAzureDataTables"]);
+    E_1(["KeyValueStorage"]);
+  end;
+  M["index.mjs"]
+  subgraph "@azure/data-tables";
+    I_0_0(["TableClient"]);
+  end;
+  subgraph "@azure/identity";
+    I_1_0(["DefaultAzureCredential"]);
+  end;
+  subgraph "event-emitter";
+    I_2_0(["EventEmitter"]);
+  end;
+  subgraph "hold";
+    I_3_0(["hold"]);
+    I_3_1(["unwrap"]);
+  end;
+  M ----> I_0_0;
+  M ----> I_1_0;
+  M ----> I_2_0;
+  M ----> I_3_0;
+  M ----> I_3_1;
+  E_0 ----> M;
+  E_1 ----> M;
 ~~~~~
