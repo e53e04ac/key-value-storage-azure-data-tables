@@ -5,8 +5,8 @@ npm install e53e04ac/key-value-storage-azure-data-tables
 ~~~~~
 
 ~~~~~ mjs
-import { KeyValueStorageAzureDataTables } from 'e53e04ac/key-value-storage-azure-data-tables';
-import { KeyValueStorage } from 'e53e04ac/key-value-storage-azure-data-tables';
+import { KeyValueStorageAzureDataTables } from 'key-value-storage-azure-data-tables';
+import { KeyValueStorage } from 'key-value-storage-azure-data-tables';
 ~~~~~
 
 ~~~~~ mermaid
@@ -23,8 +23,8 @@ graph RL;
     B_5(["key-value-storage"]);
   end;
   subgraph "github";
-    C_2(["e53e04ac/event-emitter\naea7d828d486572514f193752191206e0cbeeaa5"]);
-    C_3(["e53e04ac/hold\n593585d63bb24dc044f13a88375b53f9fa565229"]);
+    C_2(["e53e04ac/event-emitter\n1c42c278687d626fd9dbc9da241e899e482bac0d"]);
+    C_3(["e53e04ac/hold\nccd6d335b2be61f30045be782b2129d08a53ac67"]);
     C_5(["e53e04ac/key-value-storage\nf8859c136309df5ece3827a5d40d077a00585f83"]);
   end;
   subgraph "npmjs";
@@ -46,8 +46,8 @@ graph RL;
   B_5 ----> C_5;
   click C_0 "https://www.npmjs.com/package/@azure/data-tables/v/13.2.1";
   click C_1 "https://www.npmjs.com/package/@azure/identity/v/3.1.3";
-  click C_2 "https://github.com/e53e04ac/event-emitter/tree/aea7d828d486572514f193752191206e0cbeeaa5";
-  click C_3 "https://github.com/e53e04ac/hold/tree/593585d63bb24dc044f13a88375b53f9fa565229";
+  click C_2 "https://github.com/e53e04ac/event-emitter/tree/1c42c278687d626fd9dbc9da241e899e482bac0d";
+  click C_3 "https://github.com/e53e04ac/hold/tree/ccd6d335b2be61f30045be782b2129d08a53ac67";
   click C_4 "https://www.npmjs.com/package/@types/node/v/18.14.1";
   click C_5 "https://github.com/e53e04ac/key-value-storage/tree/f8859c136309df5ece3827a5d40d077a00585f83";
 ~~~~~
